@@ -1,0 +1,35 @@
+
+---
+title: "Demo: add_two function"
+output: html_document
+---
+
+This R Markdown demonstrates a simple function that adds two numbers,
+split into three chunks: setup, function definition, and example usage.
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r define-function}
+add_two <- function(a, b) {
+	if (!is.numeric(a) || !is.numeric(b)) {
+		stop("Both inputs must be numeric")
+	}
+	a + b
+}
+# show the function
+add_two
+```
+
+```{r example-usage}
+# Example usage
+result <- add_two(2, 3)
+print(result)
+
+# Basic tests
+stopifnot(add_two(0, 0) == 0)
+stopifnot(add_two(-1, 1) == 0)
+cat("All tests passed.\n")
+```
+
