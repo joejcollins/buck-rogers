@@ -1,6 +1,6 @@
 # Test
 
-Which needs to be guarded,
+Which needs to be guarded, a bit
 
 ``` {.python #main file="src/hello.py"}
 if __name__ == "__main__":

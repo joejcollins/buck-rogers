@@ -26,6 +26,11 @@ dependencies = [
     "ruff",
 ]
 
+[tool.entangled]
+version = "2.4"
+watch_list = ["docs/**/*.md"]
+hooks = ["quarto_attributes", "repl"]
+
 [tool.ruff]
 lint.select = ["F", "E", "W", "C90", "I", "PL", "D"]
 lint.ignore = ["D203", "D213"]
