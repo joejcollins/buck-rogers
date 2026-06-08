@@ -36,7 +36,8 @@
     "files.eol": "\n",
     "editor.formatOnSave": true,
     "files.associations": {
-        "*.tex": "latex"
+        "*.tex": "latex",
+        "*.w": "latex"
     },
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",

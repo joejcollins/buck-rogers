@@ -10,7 +10,8 @@
 				"ms-python.python",
 				"shardulm94.trailing-spaces",
 				"tamasfe.even-better-tom",
-				"streetsidesoftware.code-spell-checker"
+				"streetsidesoftware.code-spell-checker",
+				"sourcery.sourcery"
 			],
 			"settings": {
 				"editor.rulers": [
