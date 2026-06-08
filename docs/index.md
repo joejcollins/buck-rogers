@@ -9,5 +9,6 @@ if __name__ == "__main__":
 
 ``` {.python #hello}
 print("Hello, World!")
+print("Welcome to Buck Rogers!")
 ```
 
