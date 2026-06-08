@@ -32,8 +32,6 @@ RUN tar -xf nuweb-1.64.tar \
     && install -m 755 nuweb /usr/local/bin/nuweb \
     && rm -rf /tmp/nuweb-1.64 /tmp/nuweb-1.64.tar
 
-RUN R -e "install.packages(c('knitr', 'rmarkdown'), repos='https://cloud.r-project.org')"
-
 # Add some labels so it looks nice in Github packages.
 LABEL org.opencontainers.image.source=https://github.com/joejcollins/buck-rogers
 LABEL org.opencontainers.image.title="buck-rogers image"

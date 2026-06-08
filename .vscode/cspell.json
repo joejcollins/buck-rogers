@@ -5,6 +5,7 @@
         "autoconfig",
         "booktitle",
         "chktex",
+        "cran",
         "debugpy",
         "dotenv",
         "fontsize",
