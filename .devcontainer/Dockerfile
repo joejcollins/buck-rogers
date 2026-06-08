@@ -12,6 +12,15 @@ RUN apt --quiet update \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
 
+# Install nuweb for literate programming.
+COPY devcontainer/nuweb-1.64.tar /tmp/
+WORKDIR /tmp
+RUN tar -xf nuweb-1.64.tar \
+    && cd nuweb-1.64 \
+    && make nuweb \
+    && install -m 755 nuweb /usr/local/bin/nuweb \
+    && rm -rf /tmp/nuweb-1.64 /tmp/nuweb-1.64.tar
+
 # Add some labels so it looks nice in Github packages.
 LABEL org.opencontainers.image.source=https://github.com/joejcollins/buck-rogers
 LABEL org.opencontainers.image.title="buck-rogers image"

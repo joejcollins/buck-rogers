@@ -1,5 +1,5 @@
-\newcommand{\NWtarget}[2]{\hypertarget{#1}{#2}}
-\newcommand{\NWlink}[2]{\hyperlink{#1}{#2}}
+\newcommand{\NWtarget}[2]{#2}
+\newcommand{\NWlink}[2]{#2}
 \newcommand{\NWtxtMacroDefBy}{Fragment defined by}
 \newcommand{\NWtxtMacroRefIn}{Fragment referenced in}
 \newcommand{\NWtxtMacroNoRef}{Fragment never referenced}
@@ -7,11 +7,9 @@
 \newcommand{\NWtxtRefIn}{Referenced in}
 \newcommand{\NWtxtNoRef}{Not referenced}
 \newcommand{\NWtxtFileDefBy}{File defined by}
-\newcommand{\NWtxtIdentDefinedIn}{defined in}
-\newcommand{\NWtxtIdentUsedIn}{used in}
-\newcommand{\NWtxtIdentUsers}{Users:}
-\newcommand{\NWtxtIdentsNotUsed}{never used}
 \newcommand{\NWtxtIdentsUsed}{Uses:}
+\newcommand{\NWtxtIdentsNotUsed}{Never used}
+\newcommand{\NWtxtIdentsDefed}{Defines:}
 \newcommand{\NWsep}{${\diamond}$}
 \newcommand{\NWnotglobal}{(not defined globally)}
 \newcommand{\NWuseHyperlinks}{}
@@ -27,16 +25,28 @@ This document presents an exploratory data analysis.
 
 \begin{flushleft} \small
 \begin{minipage}{\linewidth}\label{scrap1}\raggedright\small
-\NWtarget{nuweb??}{}\verb@"src/buck_rogers/max_builtin.py"@\nobreak\ {\footnotesize{??}}$\equiv$
+\NWtarget{nuweb?}{} \verb@"src/buck_rogers/max_builtin.py"@\nobreak\ {\footnotesize {?}}$\equiv$
 \vspace{-1ex}
-\begin{list}{}{\setlength{\leftmargin}{1em}} \item
-\mbox{}\lstinline@def find_max_builtin(a, b):@\\
-\mbox{}\lstinline@    return max(a, b)@\\
-\mbox{}{\NWsep}
+\begin{list}{}{} \item
+\mbox{}\verb@@\\
+\mbox{}\verb@def find_max_builtin(a, b):@\\
+\mbox{}\verb@    return max(a, b)@\\
+\mbox{}\verb@@{\NWsep}
 \end{list}
-\vspace{-1ex}
-\end{minipage}
-\end{flushleft}
+\vspace{-1.5ex}
+\footnotesize
+\begin{list}{}{\setlength{\itemsep}{-\parsep}\setlength{\itemindent}{-\leftmargin}}
 
+\item{}
+\end{list}
+\end{minipage}\vspace{4ex}
+\end{flushleft}
+As shown in \cite{smith2020example}, referencing is important.
+Books like \cite{doe2019sample} and conference papers
+such as \cite{johnson2018conference} are also useful.
+Miscellaneous sources can be cited as in \cite{random2021misc}.
+
+\bibliographystyle{plain}
+\bibliography{biggest_built_in}
 
 \end{document}
