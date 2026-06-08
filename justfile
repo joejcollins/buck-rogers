@@ -20,6 +20,11 @@ lint:
 lock:
     uv lock
 
+# Compile the nuweb document
+nuweb:
+    .venv/bin/python scripts/nuweb.py -lr reports/dummy.w
+    .venv/bin/python scripts/nuweb.py -lr reports/dummy.w
+
 # Publish the documentation.
 publish:
 	.venv/bin/mkdocs gh-deploy --force --verbose

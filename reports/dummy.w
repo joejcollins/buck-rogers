@@ -14,17 +14,6 @@
 \section{Introduction}
 This document presents an exploratory data analysis.
 
-\section{Results}
-Here is a sample figure:
-
-\begin{figure}[h]
-  \centering{
-    \includegraphics[width=0.5\textwidth]{figures/dummy_plot.png}
-    \caption{Sample Plot}
-    \label{fig:sample_plot}
-  }
-\end{figure}
-
 As shown in \cite{smith2020example}, referencing is important.
 Books like \cite{doe2019sample} and conference papers
 such as \cite{johnson2018conference} are also useful.

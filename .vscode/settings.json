@@ -47,4 +47,10 @@
     "latex-workshop.linting.chktex.enabled": true,
     "latex-workshop.linting.chktex.exec.path": "/usr/local/bin/chktex",
     "latex-workshop.formatting.latex": "tex-fmt",
+    "latex-workshop.bibtex-format.sort.enabled": true,
+    "latex-workshop.bibtex-format.sortby": [
+        "author",
+        "editor",
+        "title",
+    ]
 }

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 #  Copyright (C) Simon Wright <simon@pushface.org>
 
@@ -977,7 +977,7 @@ class FileIndex(Index):
 
             for f in sorted(files.keys()):
                 output.write("\\item \\verb@\"%s\"@" % f)
-                output.write(" {\\footnotesize \\NWtxtDefBy\ ")
+                output.write(" {\\footnotesize \\NWtxtDefBy\\ ")
                 CodeElement.write_elements(output, files[f])
                 output.write(".}\n")
 
@@ -987,7 +987,7 @@ class FileIndex(Index):
 
 
 class MacroIndex(Index):
-    """Outputs an index of all the fragments in the docment, stating
+    """Outputs an index of all the fragments in the document, stating
     where defined and where used."""
 
     def generate_latex(self, output):
@@ -1158,14 +1158,14 @@ def read_nuweb(path):
 
 def read_aux(path):
     """LaTeX generates <basename>.aux, which contains (inter alia) the
-    page on which each \label{} occurs. Nuweb generates a label for
-    each scrap (\label{scrapnnn}; the first time through (when no .aux
+    page on which each \\label{} occurs. Nuweb generates a label for
+    each scrap (\\label{scrapnnn}; the first time through (when no .aux
     file is found) and when the number of scraps increases, we report
     that nuweb needs to be re-run. Of course, the same will be true if
     a scrap ends up on a different page, so this is more of a hint
     than an 'if and only if' indication.
 
-    Once we know whch page a scrap is on, and which scrap it is on
+    Once we know which page a scrap is on, and which scrap it is on
     that page, we can create the proper cross-reference."""
 
     global code_elements, need_to_rerun

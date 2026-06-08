@@ -20,6 +20,7 @@
         "nbconvert",
         "nonstopmode",
         "numpy",
+        "nuweb",
         "Pandoc",
         "pdflatex",
         "pycache",
