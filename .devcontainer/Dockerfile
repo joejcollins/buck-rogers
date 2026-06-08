@@ -13,7 +13,7 @@ RUN apt --quiet update \
     && rm -rf /var/lib/apt/lists/*
 
 # Add some labels so it looks nice in Github packages.
-LABEL org.opencontainers.image.source=https://github.com/earthroverprogram/buck-rogers
+LABEL org.opencontainers.image.source=https://github.com/joejcollins/buck-rogers
 LABEL org.opencontainers.image.title="buck-rogers image"
 LABEL org.opencontainers.image.description="Literate programming environment."
 LABEL org.opencontainers.image.authors="Joe J Collins <joejcollins@gmail.com>"

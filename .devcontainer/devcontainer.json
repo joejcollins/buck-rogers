@@ -1,6 +1,6 @@
 {
-	"name": "LaTeX on bragi",
-	"image": "ghcr.io/earthroverprogram/bragi:latest",
+	"name": "Literate programming on buck-rogers",
+	"image": "ghcr.io/joejcollins/buck-rogers:latest",
 	"customizations": {
 		"vscode": {
 			"extensions": [
@@ -9,7 +9,7 @@
 				"ms-toolsai.jupyter",
 				"ms-python.python",
 				"shardulm94.trailing-spaces",
-				"stkb.rewrap",
+				"tamasfe.even-better-tom",
 				"streetsidesoftware.code-spell-checker"
 			],
 			"settings": {
