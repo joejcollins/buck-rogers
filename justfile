@@ -22,8 +22,8 @@ lock:
 
 # Compile the nuweb document
 nuweb:
-    .venv/bin/python scripts/nuweb.py -lr reports/dummy.w
-    .venv/bin/python scripts/nuweb.py -lr reports/dummy.w
+    .venv/bin/python scripts/nuweb.py -lr reports/biggest_built_in.w
+    .venv/bin/python scripts/nuweb.py -lr reports/biggest_built_in.w
 
 # Publish the documentation.
 publish:

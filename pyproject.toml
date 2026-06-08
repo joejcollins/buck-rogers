@@ -17,6 +17,7 @@ dependencies = [
     "entangled-cli",
     "ipykernel",
     "ipympl",
+    "ipytest",
     "matplotlib",
     "mkdocs",
     "mkdocs-entangled-plugin",
