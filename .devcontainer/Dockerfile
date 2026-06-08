@@ -20,7 +20,7 @@ RUN apt --quiet update \
     r-base-dev \
     r-cran-knitr \
     r-cran-rmarkdown
-    && apt clean \
+    && apt clean
     && rm -rf /var/lib/apt/lists/*
 
 # Install nuweb for literate programming.
