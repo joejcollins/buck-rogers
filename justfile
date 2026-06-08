@@ -38,3 +38,7 @@ report:
 venv:
     uv venv .venv --clear
     uv sync --frozen
+
+# Run the entangled file watcher
+watch:
+    .venv/bin/entangled watch
