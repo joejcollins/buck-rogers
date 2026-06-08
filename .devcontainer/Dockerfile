@@ -8,20 +8,20 @@ RUN curl -LsSf https://astral.sh/uv/install.sh | sh \
 
 # Install LaTeX.
 RUN apt --quiet update \
- && apt install --assume-yes \
-    texlive-latex-base \
-    texlive-latex-recommended \
-    texlive-latex-extra \
-    texlive-extra-utils \ 
-    latexmk \
-    just \
-    pandoc \
-    r-base \
-    r-base-dev \
-    r-cran-knitr \
-    r-cran-rmarkdown \
- && apt clean
- && rm -rf /var/lib/apt/lists/*
+    && apt install --assume-yes \
+        texlive-latex-base \
+        texlive-latex-recommended \
+        texlive-latex-extra \
+        texlive-extra-utils \ 
+        latexmk \
+        just \
+        pandoc \
+        r-base \
+        r-base-dev \
+        r-cran-knitr \
+        r-cran-rmarkdown \
+    && apt clean \
+    && rm -rf /var/lib/apt/lists/*
 
 # Install nuweb for literate programming.
 COPY .devcontainer/nuweb-1.64.tar /tmp/
