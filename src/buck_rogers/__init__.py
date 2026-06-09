@@ -1,1 +1,1 @@
-"""Max function."""
+"""Max value of two numbers."""
