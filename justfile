@@ -22,7 +22,7 @@ lock:
 
 # Compile the nuweb document
 nuweb:
-    ./nuweb -p reports reports/biggest_built_in.w
+    nuweb -l -p reports reports/biggest_built_in.w
 
 # Publish the documentation.
 publish:

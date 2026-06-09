@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[a4paper]{article}
 \title{Exploratory Data Analysis}
 \author{Your Name}
 \date{\today}
@@ -23,8 +23,8 @@ get started with some boring random numbers:
 
 <<boring-random>>=
 find_max_builtin <- function(a, b) {
-  return(max(a, b))
-}
+    return(max(a, b))
+  }
 @
 
 Do the above chunks work? You should be able to compile the \TeX{}

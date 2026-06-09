@@ -1,4 +1,5 @@
-\documentclass{article}
+\documentclass[a4paper]{article}
+\usepackage{listings}
 \title{Exploratory Data Analysis}
 \date{\today}
 \begin{document}
@@ -8,10 +9,10 @@
 \section{Introduction}
 This document presents an exploratory data analysis.
 
-@o src/buck_rogers/max_builtin.py @{
-def find_max_builtin(a, b):
-    return max(a, b)
-@}
+@o ../src/buck_rogers/max_builtin.py @{
+        def find_max_builtin(a, b):
+        """Return the greater of two values using the built-in max function."""
+        return max(a, b)@}
 
 As shown in \cite{smith2020example}, referencing is important.
 Books like \cite{doe2019sample} and conference papers

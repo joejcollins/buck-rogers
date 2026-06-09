@@ -13,7 +13,8 @@
 \newcommand{\NWsep}{${\diamond}$}
 \newcommand{\NWnotglobal}{(not defined globally)}
 \newcommand{\NWuseHyperlinks}{}
-\documentclass{article}
+\documentclass[a4paper]{article}
+\usepackage{listings}
 \title{Exploratory Data Analysis}
 \date{\today}
 \begin{document}
@@ -23,15 +24,17 @@
 \section{Introduction}
 This document presents an exploratory data analysis.
 
+\begin{verbatim}
 \begin{flushleft} \small
 \begin{minipage}{\linewidth}\label{scrap1}\raggedright\small
-\NWtarget{nuweb?}{} \verb@"src/buck_rogers/max_builtin.py"@\nobreak\ {\footnotesize {?}}$\equiv$
+\NWtarget{nuweb?}{} \verb@"../src/buck_rogers/max_builtin.py"@\nobreak\ {\footnotesize {?}}$\equiv$
 \vspace{-1ex}
 \begin{list}{}{} \item
-\mbox{}\verb@@\\
-\mbox{}\verb@def find_max_builtin(a, b):@\\
-\mbox{}\verb@    return max(a, b)@\\
-\mbox{}\verb@@{\NWsep}
+\mbox{}\lstinline@@\\
+\mbox{}\lstinline@def find_max_builtin(a, b):@\\
+\mbox{}\lstinline@    """Return the greater of two values using the built-in max function."""@\\
+\mbox{}\lstinline@    return max(a, b)@\\
+\mbox{}\lstinline@@{\NWsep}
 \end{list}
 \vspace{-1.5ex}
 \footnotesize
@@ -41,6 +44,8 @@ This document presents an exploratory data analysis.
 \end{list}
 \end{minipage}\vspace{4ex}
 \end{flushleft}
+\end{verbatim}
+
 As shown in \cite{smith2020example}, referencing is important.
 Books like \cite{doe2019sample} and conference papers
 such as \cite{johnson2018conference} are also useful.
