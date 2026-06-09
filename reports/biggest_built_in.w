@@ -24,28 +24,48 @@ def find_max(a, b):
 
 \section{Testing the Max Function}
 
+Tests with pytest are important to ensure that our code works as expected.
+
 @o ../tests/test_max_builtin.py @{
 """Test the max_builtin module."""
 
 from buck_rogers import max_builtin
 
+@< test-find-max-builtin-10 @>
 
-def test_find_max_builtin():
+@< test-find-max-builtin-5 @>
+
+@}
+
+\subsection{Test cases}
+
+Is the max function working correctly? Let's find out.
+
+@d test-find-max-builtin-5 @{
+def test_find_max_builtin_five():
     """Test the find_max_builtin function."""
     # Arrange
     five = 5
-    ten = 10
     # Act & Assert
     assert max_builtin.find_max(3, five) == five
+@}
+
+Maybe we should also test with ten.
+Also referred to as Smith's method \cite{smith2020example},
+referencing is important.
+
+@d test-find-max-builtin-10 @{
+def test_find_max_builtin_ten():
+    """Test the find_max_builtin function."""
+    # Arrange
+    ten = 10
+    # Act & Assert
     assert max_builtin.find_max(ten, 2) == ten
 @}
 
-
-As shown in \cite{smith2020example}, referencing is important.
 Books like \cite{doe2019sample} and conference papers
 such as \cite{johnson2018conference} are also useful.
 Miscellaneous sources can be cited as in \cite{random2021misc}.
-
 
 \section*{Files}
 @f

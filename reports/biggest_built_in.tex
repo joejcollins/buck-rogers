@@ -52,6 +52,8 @@ This document presents an exploratory data analysis.
 \end{flushleft}
 \section{Testing the Max Function}
 
+Tests with pytest are important to ensure that our code works as expected.
+
 \begin{flushleft} \small
 \begin{minipage}{\linewidth}\label{scrap2}\raggedright\small
 \NWtarget{nuweb1b}{} \verb@"../tests/test_max_builtin.py"@\nobreak\ {\footnotesize {1b}}$\equiv$
@@ -62,15 +64,10 @@ This document presents an exploratory data analysis.
 \mbox{}\lstinline@@\\
 \mbox{}\lstinline@from buck_rogers import max_builtin@\\
 \mbox{}\lstinline@@\\
+\mbox{}\lstinline@@\hbox{$\langle\,${\itshape test-find-max-builtin-10}\nobreak\ {\footnotesize \NWlink{nuweb2b}{2b}}$\,\rangle$}\lstinline@@\\
 \mbox{}\lstinline@@\\
-\mbox{}\lstinline@def test_find_max_builtin():@\\
-\mbox{}\lstinline@    """Test the find_max_builtin function."""@\\
-\mbox{}\lstinline@    # Arrange@\\
-\mbox{}\lstinline@    five = 5@\\
-\mbox{}\lstinline@    ten = 10@\\
-\mbox{}\lstinline@    # Act & Assert@\\
-\mbox{}\lstinline@    assert max_builtin.find_max(3, five) == five@\\
-\mbox{}\lstinline@    assert max_builtin.find_max(ten, 2) == ten@\\
+\mbox{}\lstinline@@\hbox{$\langle\,${\itshape test-find-max-builtin-5}\nobreak\ {\footnotesize \NWlink{nuweb2a}{2a}}$\,\rangle$}\lstinline@@\\
+\mbox{}\lstinline@@\\
 \mbox{}\lstinline@@{\NWsep}
 \end{list}
 \vspace{-1.5ex}
@@ -81,11 +78,63 @@ This document presents an exploratory data analysis.
 \end{list}
 \end{minipage}\vspace{4ex}
 \end{flushleft}
-As shown in \cite{smith2020example}, referencing is important.
+\subsection{Test cases}
+
+Is the max function working correctly? Let's find out.
+
+\begin{flushleft} \small
+\begin{minipage}{\linewidth}\label{scrap3}\raggedright\small
+\NWtarget{nuweb2a}{} $\langle\,${\itshape test-find-max-builtin-5}\nobreak\ {\footnotesize {2a}}$\,\rangle\equiv$
+\vspace{-1ex}
+\begin{list}{}{} \item
+\mbox{}\lstinline@@\\
+\mbox{}\lstinline@def test_find_max_builtin_five():@\\
+\mbox{}\lstinline@    """Test the find_max_builtin function."""@\\
+\mbox{}\lstinline@    # Arrange@\\
+\mbox{}\lstinline@    five = 5@\\
+\mbox{}\lstinline@    # Act & Assert@\\
+\mbox{}\lstinline@    assert max_builtin.find_max(3, five) == five@\\
+\mbox{}\lstinline@@{\NWsep}
+\end{list}
+\vspace{-1.5ex}
+\footnotesize
+\begin{list}{}{\setlength{\itemsep}{-\parsep}\setlength{\itemindent}{-\leftmargin}}
+\item \NWtxtMacroRefIn\ \NWlink{nuweb1b}{1b}.
+
+\item{}
+\end{list}
+\end{minipage}\vspace{4ex}
+\end{flushleft}
+Maybe we should also test with ten.
+Also referred to as Smith's method \cite{smith2020example},
+referencing is important.
+
+\begin{flushleft} \small
+\begin{minipage}{\linewidth}\label{scrap4}\raggedright\small
+\NWtarget{nuweb2b}{} $\langle\,${\itshape test-find-max-builtin-10}\nobreak\ {\footnotesize {2b}}$\,\rangle\equiv$
+\vspace{-1ex}
+\begin{list}{}{} \item
+\mbox{}\lstinline@@\\
+\mbox{}\lstinline@def test_find_max_builtin_ten():@\\
+\mbox{}\lstinline@    """Test the find_max_builtin function."""@\\
+\mbox{}\lstinline@    # Arrange@\\
+\mbox{}\lstinline@    ten = 10@\\
+\mbox{}\lstinline@    # Act & Assert@\\
+\mbox{}\lstinline@    assert max_builtin.find_max(ten, 2) == ten@\\
+\mbox{}\lstinline@@{\NWsep}
+\end{list}
+\vspace{-1.5ex}
+\footnotesize
+\begin{list}{}{\setlength{\itemsep}{-\parsep}\setlength{\itemindent}{-\leftmargin}}
+\item \NWtxtMacroRefIn\ \NWlink{nuweb1b}{1b}.
+
+\item{}
+\end{list}
+\end{minipage}\vspace{4ex}
+\end{flushleft}
 Books like \cite{doe2019sample} and conference papers
 such as \cite{johnson2018conference} are also useful.
 Miscellaneous sources can be cited as in \cite{random2021misc}.
-
 
 \section*{Files}
 
@@ -95,8 +144,11 @@ Miscellaneous sources can be cited as in \cite{random2021misc}.
 \end{list}}
 
 \section*{Scraps}
-None.
 
+{\small\begin{list}{}{\setlength{\itemsep}{-\parsep}\setlength{\itemindent}{-\leftmargin}}
+\item $\langle\,$test-find-max-builtin-10\nobreak\ {\footnotesize \NWlink{nuweb2b}{2b}}$\,\rangle$ {\footnotesize {\NWtxtRefIn} \NWlink{nuweb1b}{1b}.}
+\item $\langle\,$test-find-max-builtin-5\nobreak\ {\footnotesize \NWlink{nuweb2a}{2a}}$\,\rangle$ {\footnotesize {\NWtxtRefIn} \NWlink{nuweb1b}{1b}.}
+\end{list}}
 
 \bibliographystyle{plain}
 \bibliography{biggest_built_in}
