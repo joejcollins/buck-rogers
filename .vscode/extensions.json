@@ -2,6 +2,7 @@
     "recommendations": [
         "aaron-bond.better-comments",
         "james-yu.latex-workshop",
+        "nefrob.vscode-just-syntax",
         "ms-toolsai.jupyter",
         "ms-python.python",
         "shardulm94.trailing-spaces",

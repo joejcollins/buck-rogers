@@ -36,7 +36,8 @@
     "files.eol": "\n",
     "editor.formatOnSave": true,
     "files.associations": {
-        "*.tex": "latex"
+        "*.tex": "latex",
+        "*.w": "latex",
     },
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
@@ -45,11 +46,14 @@
     "latex-workshop.latex.clean.subfolder.enabled": true,
     "latex-workshop.linting.chktex.enabled": true,
     "latex-workshop.linting.chktex.exec.path": "/usr/local/bin/chktex",
-    "latex-workshop.formatting.latex": "latexindent",
     "latex-workshop.bibtex-format.sort.enabled": true,
     "latex-workshop.bibtex-format.sortby": [
         "author",
         "editor",
         "title",
-    ]
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+    },
 }

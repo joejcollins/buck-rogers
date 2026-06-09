@@ -24,6 +24,9 @@ dependencies = [
     "mkdocs-material",
     "nbconvert",
     "numpy",
+    "pytest",
+    "pytest-cov",
+    "python-dotenv",
     "ruff",
 ]
 

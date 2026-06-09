@@ -14,7 +14,7 @@ help:
 
 # Lint the code with ruff.
 lint:
-    .venv/bin/ruff check ./src
+    .venv/bin/ruff check ./src ./tests
 
 # Update the lock file from pyproject.toml.
 lock:
@@ -22,16 +22,24 @@ lock:
 
 # Compile the nuweb document
 nuweb:
-    nuweb -l -p reports reports/biggest_built_in.w
+    nuweb -l -r -p reports reports/biggest_built_in.w
+    pdflatex -output-directory=reports reports/biggest_built_in.tex
+    nuweb -l -r -p reports reports/biggest_built_in.w
+    pdflatex -output-directory=reports reports/biggest_built_in.tex
 
 # Publish the documentation.
 publish:
-	.venv/bin/mkdocs gh-deploy --force --verbose
+    .venv/bin/mkdocs gh-deploy --force --verbose
 
 # Report Python version and pip packages.
 report:
     .venv/bin/python --version
     uv pip list -v
+
+# Run the tests with pytest.
+test:
+    .venv/bin/pytest ./tests --verbose --color=yes
+    .venv/bin/pytest --cov=buck_rogers --cov-fail-under=40
 
 # Create the virtual environment.
 venv:

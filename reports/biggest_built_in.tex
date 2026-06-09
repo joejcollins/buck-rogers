@@ -1,5 +1,5 @@
-\newcommand{\NWtarget}[2]{#2}
-\newcommand{\NWlink}[2]{#2}
+\newcommand{\NWtarget}[2]{\hypertarget{#1}{#2}}
+\newcommand{\NWlink}[2]{\hyperlink{#1}{#2}}
 \newcommand{\NWtxtMacroDefBy}{Fragment defined by}
 \newcommand{\NWtxtMacroRefIn}{Fragment referenced in}
 \newcommand{\NWtxtMacroNoRef}{Fragment never referenced}
@@ -13,25 +13,31 @@
 \newcommand{\NWsep}{${\diamond}$}
 \newcommand{\NWnotglobal}{(not defined globally)}
 \newcommand{\NWuseHyperlinks}{}
-\documentclass[a4paper]{article}
+\documentclass[a4paper,11pt]{article}
 \usepackage{listings}
+\lstset{language=Python}
+\usepackage{hyperref}
 \title{Exploratory Data Analysis}
 \date{\today}
 \begin{document}
 \author{Joe Bloggs}
 \maketitle{}
 
-\section{Introduction}
+\section{Using the Max Function}
+
 This document presents an exploratory data analysis.
 
-\begin{verbatim}
+
 \begin{flushleft} \small
 \begin{minipage}{\linewidth}\label{scrap1}\raggedright\small
-\NWtarget{nuweb?}{} \verb@"../src/buck_rogers/max_builtin.py"@\nobreak\ {\footnotesize {?}}$\equiv$
+\NWtarget{nuweb1a}{} \verb@"../src/buck_rogers/max_builtin.py"@\nobreak\ {\footnotesize {1a}}$\equiv$
 \vspace{-1ex}
 \begin{list}{}{} \item
 \mbox{}\lstinline@@\\
-\mbox{}\lstinline@def find_max_builtin(a, b):@\\
+\mbox{}\lstinline@"""Max function."""@\\
+\mbox{}\lstinline@@\\
+\mbox{}\lstinline@@\\
+\mbox{}\lstinline@def find_max(a, b):@\\
 \mbox{}\lstinline@    """Return the greater of two values using the built-in max function."""@\\
 \mbox{}\lstinline@    return max(a, b)@\\
 \mbox{}\lstinline@@{\NWsep}
@@ -44,12 +50,53 @@ This document presents an exploratory data analysis.
 \end{list}
 \end{minipage}\vspace{4ex}
 \end{flushleft}
-\end{verbatim}
+\section{Testing the Max Function}
 
+\begin{flushleft} \small
+\begin{minipage}{\linewidth}\label{scrap2}\raggedright\small
+\NWtarget{nuweb1b}{} \verb@"../tests/test_max_builtin.py"@\nobreak\ {\footnotesize {1b}}$\equiv$
+\vspace{-1ex}
+\begin{list}{}{} \item
+\mbox{}\lstinline@@\\
+\mbox{}\lstinline@"""Test the max_builtin module."""@\\
+\mbox{}\lstinline@@\\
+\mbox{}\lstinline@from buck_rogers import max_builtin@\\
+\mbox{}\lstinline@@\\
+\mbox{}\lstinline@@\\
+\mbox{}\lstinline@def test_find_max_builtin():@\\
+\mbox{}\lstinline@    """Test the find_max_builtin function."""@\\
+\mbox{}\lstinline@    # Arrange@\\
+\mbox{}\lstinline@    five = 5@\\
+\mbox{}\lstinline@    ten = 10@\\
+\mbox{}\lstinline@    # Act & Assert@\\
+\mbox{}\lstinline@    assert max_builtin.find_max(3, five) == five@\\
+\mbox{}\lstinline@    assert max_builtin.find_max(ten, 2) == ten@\\
+\mbox{}\lstinline@@{\NWsep}
+\end{list}
+\vspace{-1.5ex}
+\footnotesize
+\begin{list}{}{\setlength{\itemsep}{-\parsep}\setlength{\itemindent}{-\leftmargin}}
+
+\item{}
+\end{list}
+\end{minipage}\vspace{4ex}
+\end{flushleft}
 As shown in \cite{smith2020example}, referencing is important.
 Books like \cite{doe2019sample} and conference papers
 such as \cite{johnson2018conference} are also useful.
 Miscellaneous sources can be cited as in \cite{random2021misc}.
+
+
+\section*{Files}
+
+{\small\begin{list}{}{\setlength{\itemsep}{-\parsep}\setlength{\itemindent}{-\leftmargin}}
+\item \verb@"../src/buck_rogers/max_builtin.py"@ {\footnotesize {\NWtxtDefBy} \NWlink{nuweb1a}{1a}.}
+\item \verb@"../tests/test_max_builtin.py"@ {\footnotesize {\NWtxtDefBy} \NWlink{nuweb1b}{1b}.}
+\end{list}}
+
+\section*{Scraps}
+None.
+
 
 \bibliographystyle{plain}
 \bibliography{biggest_built_in}

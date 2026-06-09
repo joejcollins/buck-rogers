@@ -6,20 +6,21 @@ FROM mcr.microsoft.com/devcontainers/base:trixie
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh \
     && cp /root/.local/bin/uv /usr/local/bin/uv
 
-# Install LaTeX.
+# Install utilities, R and LaTeX.
 RUN apt --quiet update \
     && apt install --assume-yes \
-        texlive-latex-base \
-        texlive-latex-recommended \
-        texlive-latex-extra \
-        texlive-extra-utils \ 
-        latexmk \
+        cargo \
         just \
+        latexmk \
         pandoc \
         r-base \
         r-base-dev \
         r-cran-knitr \
         r-cran-rmarkdown \
+        texlive-latex-base \
+        texlive-latex-recommended \
+        texlive-latex-extra \
+        texlive-extra-utils \ 
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
 
