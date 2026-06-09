@@ -1,5 +1,5 @@
-site_name: Literate Programming with Python
-site_description: A collection of literate programming examples and resources using Python.
+site_name: Literate Programming
+site_description: Literate programming examples and resources using Python.
 site_author: Joe Collins
 repo_url: https://joejcollins.github.io/buck-rogers/
 theme:
