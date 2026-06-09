@@ -8,6 +8,10 @@ clean:
     find . -name "*.pyc" -exec rm -f {} \;
     find . -type f -name "*.py[co]" -delete -or -type d -name "__pycache__" -delete
 
+# Serve the documentation.
+docs:
+    .venv/bin/mkdocs serve
+
 # Show help for each of the recipes.
 help:
     @just --list
