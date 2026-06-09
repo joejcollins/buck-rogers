@@ -1,5 +1,5 @@
 [project]
-name = "bragi"
+name = "buck-rogers"
 version = "0.0.1"
 description = "LaTeX Writing Repo"
 readme = "README.md"
@@ -20,6 +20,7 @@ dependencies = [
     "ipytest",
     "matplotlib",
     "mkdocs",
+    "mkdocstrings[python]",
     "mkdocs-entangled-plugin",
     "mkdocs-material",
     "nbconvert",

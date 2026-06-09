@@ -12,3 +12,6 @@ print("Hello, World!")
 print("Welcome to Buck Rogers!")
 ```
 
+def find_max_math(a, b):
+    return (a + b + abs(a - b)) // 2
+    

@@ -1,9 +1,17 @@
-site_name: LaTeX Writing Repo
+site_name: Literate Programming with Python
+site_description: A collection of literate programming examples and resources using Python.
+site_author: Joe Collins
+repo_url: https://joejcollins.github.io/buck-rogers/
 theme:
   name: readthedocs
 
-nav:
-  - Home: index.md
+plugins:
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: google
+            show_source: false
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
