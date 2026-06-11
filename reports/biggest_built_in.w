@@ -5,7 +5,7 @@
 \title{Exploratory Data Analysis}
 \date{\today}
 \begin{document}
-\author{Joe Bloggs}
+\author{Big Joe}
 \maketitle{}
 
 \section{Using the Max Function}

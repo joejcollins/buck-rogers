@@ -15,8 +15,6 @@ def test_find_max_math_ten():
 
 # ~/~ end
 # ~/~ begin <<docs/max_by_math.md#test_five>>[init]
-
-
 def test_find_max_math_five():
     """Test the find_max_math function."""
     # Arrange

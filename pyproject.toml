@@ -33,7 +33,7 @@ dependencies = [
 
 [tool.entangled]
 version = "2.4"
-watch_list = ["docs/**/*.md"]
+watch_list = ["./docs/**/*.md"]
 hooks = ["quarto_attributes", "repl"]
 
 [tool.ruff]
