@@ -43,6 +43,10 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">Max by Math</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#just-maths">Just Maths</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tests">Tests</a>
+    </li>
     </ul>
                 </li>
               </ul>
@@ -75,13 +79,19 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="max-by-math">Max by Math</h1>
-<p>A nutty approach that should work.</p>
+<ul>
+<li><em>By Big Joe</em></li>
+<li><em>June 2026</em></li>
+</ul>
+<h2 id="just-maths">Just Maths</h2>
+<p>What about just using maths to solve the problem.</p>
 <pre><code class="language-python">&quot;&quot;&quot;Max value of two numbers.&quot;&quot;&quot;
 
 def find_max_math(a, b):
     &quot;&quot;&quot;Compute the maximum of two integers using arithmetic operations only.&quot;&quot;&quot;
     return (a + b + abs(a - b)) // 2
 </code></pre>
+<h2 id="tests">Tests</h2>
 <p>But does it work.</p>
 <pre><code class="language-python">&quot;&quot;&quot;Tests for the max_math module.&quot;&quot;&quot;
 
@@ -91,6 +101,7 @@ from buck_rogers import max_math
 &lt;&lt;test_ten&gt;&gt;
 &lt;&lt;test_five&gt;&gt;
 </code></pre>
+<p>This is the second test.</p>
 <pre id="test_ten"><code class="language-python">def test_find_max_math_ten():
     &quot;&quot;&quot;Test the find_max_math function.&quot;&quot;&quot;
     # Arrange
@@ -100,9 +111,8 @@ from buck_rogers import max_math
 
 
 </code></pre>
-<pre id="test_five"><code class="language-python">
-
-def test_find_max_math_five():
+<p>And this is the first.</p>
+<pre id="test_five"><code class="language-python">def test_find_max_math_five():
     &quot;&quot;&quot;Test the find_max_math function.&quot;&quot;&quot;
     # Arrange
     five = 5
