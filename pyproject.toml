@@ -41,6 +41,7 @@ lint.select = ["F", "E", "W", "C90", "I", "PL", "D"]
 lint.ignore = ["D203", "D213"]
 lint.fixable = ["ALL"]
 line-length = 88
+format.preview = true
 
 [tool.uv]
 package = true
