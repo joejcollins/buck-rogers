@@ -83,7 +83,9 @@ def find_max_math(a, b):
     return (a + b + abs(a - b)) // 2
 </code></pre>
 <p>But does it work.</p>
-<pre><code class="language-python">from buck_rogers import max_math
+<pre><code class="language-python">&quot;&quot;&quot;Tests for the max_math module.&quot;&quot;&quot;
+
+from buck_rogers import max_math
 
 
 &lt;&lt;test_ten&gt;&gt;
@@ -95,14 +97,19 @@ def find_max_math(a, b):
     ten = 10
     # Act &amp; Assert
     assert max_math.find_max_math(ten, 2) == ten
+
+
 </code></pre>
 <pre id="test_five"><code class="language-python">
+
 def test_find_max_math_five():
     &quot;&quot;&quot;Test the find_max_math function.&quot;&quot;&quot;
     # Arrange
     five = 5
     # Act &amp; Assert
     assert max_math.find_max_math(3, five) == five
+
+
 </code></pre>
               
             </div>
